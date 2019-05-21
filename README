@@ -1,0 +1,41 @@
+************* The Golden Crown ***************
+                   USAGE                      
+**********************************************
+Type either a, b, c, d or q as input and press Enter. Alternatively you can also type in and provide the input as shown below.
+Instead of a, b and c type in the sentences as seen in the bottom most menu corresponding to each one of them.
+For d it has to be always provided in this format Kingdom_name,"secret_message_to_kingdom". Quotes are optional. Can send messages more than once too.
+Once either b or c is opted or supplied as input the current ongoing game is over and continues with a new one from the start. Echoes an "It's Over." message.
+The kingdom names are :- Land, Water, Ice, Air and Fire. The kingdom name and the secret message has to be always separated by a comma.
+
+This below is the menu awaiting user input. As explained above one can provide a, b, c and q for option numbers a), b), c) and e) respctively.
+Otherwise alternatively can type in the sentences as seen for a), b) and c). q for option e)'s entry. d) entry has to be in a format only as explained above.
+                    MENU                      
+**********************************************
+a) Who is the ruler of Southeros?, b) Allies of Ruler?, c) Allies of King Shan?, d)<Kingdom_name>,<"secret_message_to_kingdom">, e) q to quit
+
+*** NOTE:***
+1) We can also supply the input(s) by piping from a file too as below. Consider the file's content as below.
+$ cat some_input_file
+Ice, “zmzmzmzaztzozh”
+Land, “a1d22n333a4444p”
+Ice, “zmzmzmzaztzozh”
+a
+b
+c
+b
+a
+d
+d
+
+Air, “Let’s swing the sword together”
+Land, “Die or play the tame of thrones”
+Ice, “Ahoy! Fight for me with men and money”
+Water, “Summer is coming”
+Fire, “Drag on Martin!”
+Who is the ruler of Southeros?
+Allies of Ruler?
+q
+
+$ cat some_input_file |python ./golden_crown_pb_1.py
+
+2) Do export DEBUG=1 from the shell to see some progress messages (used while developing only).
